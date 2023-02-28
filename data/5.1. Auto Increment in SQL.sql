@@ -1,0 +1,20 @@
+# Auto Increment Keywords in SQL
+/* 
+To Increase the Value of the Specified Table Column by 1
+*/
+USE FAZA;
+CREATE TABLE EMPONE(ID INT AUTO_INCREMENT, NAME VARCHAR(15)); # THIS PRODUCE ERROR
+CREATE TABLE EMPONE(ID INT PRIMARY KEY AUTO_INCREMENT, NAME VARCHAR(15));
+SELECT *
+FROM EMPONE;
+
+INSERT INTO EMPONE VALUES(5,'Erul');
+INSERT INTO EMPONE(NAME) VALUES('Faza'); # ID Will auto display 6 because of Auto Increment in ID before
+# Examples 2
+CREATE TABLE EMPTWO(ID INT PRIMARY KEY AUTO_INCREMENT, NAME VARCHAR(15));
+
+SELECT *
+FROM EMPTWO;
+
+INSERT INTO EMPTWO(NAME) VALUES ('Putri'); # ID will Automatically Display 1
+INSERT INTO EMPTWO(NAME) VALUES ('Vina'); # ID Will Automatically Display 2 and etc.
