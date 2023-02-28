@@ -1,0 +1,18 @@
+# Primary Key Integrity Constraint
+# Primary Key = Not Null + Unique
+
+USE FAZA;
+
+CREATE TABLE EMP(ID INT PRIMARY KEY, NAME VARCHAR(15), EXPERIENCE INT);
+
+SELECT *
+FROM EMP;
+
+INSERT INTO EMP VALUES (1,'Faza',12);
+INSERT INTO EMP VALUES (1,'Syaerul',7); # Will return an Error
+
+USE FAZA;
+CREATE TABLE GENDUT (ID INT, NAME VARCHAR(15), EXPERIENCE INT, PRIMARY KEY(EXPERIENCE));
+
+INSERT INTO GENDUT VALUES (1,'Omeng',10);
+INSERT INTO GENDUT VALUES (5,'Faza',10); # Will Return an Error because Experience is Primary Key
