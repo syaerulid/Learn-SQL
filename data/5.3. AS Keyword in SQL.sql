@@ -1,0 +1,23 @@
+# How to Use As Keyword in SQL Statement
+# Purpose is to create a new table with the records of an existing table
+
+USE WORLD;
+
+SELECT *
+FROM PLACE;
+# EXAMPLE
+CREATE TABLE NEWPLACE 
+AS
+SELECT *
+FROM PLACE;
+
+SELECT *
+FROM NEWPLACE;
+# EXAMPLE 2
+CREATE TABLE PLACETWO
+AS
+SELECT ID, DISTRICT
+FROM PLACE;
+
+SELECT *
+FROM PLACETWO;
