@@ -1,0 +1,22 @@
+## Round in SQL
+# Query the Region, Maximum Indep Year, where Life Expectancy >  60 and Round the LifeExpectancy with No decimals
+USE WORLD;
+-- #1 SELECT ALL
+SELECT *
+FROM COUNTRY;
+-- #2 SELECT Life Expectancy Region and IndepYear
+SELECT LIFEEXPECTANCY, REGION, INDEPYEAR
+FROM COUNTRY;
+-- #3 Inner Query
+SELECT MAX(INDEPYEAR)
+FROM COUNTRY
+WHERE LIFEEXPECTANCY >= 60;
+-- #4 Outer + Inner
+SELECT REGION, INDEPYEAR,ROUND(LIFEEXPECTANCY)
+FROM COUNTRY
+WHERE INDEPYEAR IN
+(SELECT MAX(INDEPYEAR)
+FROM COUNTRY
+WHERE LIFEEXPECTANCY >= 60);
+
+-- #4 
