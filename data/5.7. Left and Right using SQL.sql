@@ -19,3 +19,9 @@ SELECT NAME
 FROM CITY
 WHERE LEFT (CITY, 1)
 NOT IN ('a','e','i','u','o');
+
+-- ALL & >75 & Order by Last three characters name
+SELECT NAME
+FROM STUDENTS
+WHERE MARKS > 75
+ORDER BY RIGHT (NAME, 3), ID;
