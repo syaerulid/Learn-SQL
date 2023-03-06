@@ -1,5 +1,10 @@
 ## Using Filter Clause in SQL
 
+-- Syntax
+The filter clause follows an aggregate function:
+
+-- SUM(<expression>) FILTER(WHERE <condition>)
+
 SELECT *
 FROM db_employee;
 
