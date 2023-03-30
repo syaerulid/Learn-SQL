@@ -1,0 +1,15 @@
+/*
+DATE_TRUNC is a function in SQL that is used to truncate a date or timestamp value to a specified precision. 
+The function returns a new date or timestamp value with all the values at a lower precision set to zero.
+
+For example, if you have a timestamp value of "2022-04-01 13:45:30" and you want to truncate it to the hour precision, 
+the resulting value would be "2022-04-01 13:00:00". The minutes and seconds have been truncated to zero, and only the hour value remains.
+*/
+
+Example :
+SELECT
+    DATE_TRUNC('hour', order_timestamp_utc) AS hour,
+    AVG(amount) as avg_vol
+FROM postmates_orders
+GROUP BY customer_id,order_timestamp_utc
+ORDER BY avg_vol DESC
