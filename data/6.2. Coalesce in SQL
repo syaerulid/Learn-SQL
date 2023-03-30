@@ -1,0 +1,7 @@
+*/ Coalesce in SQL Return the first Non Null Values /*
+
+SELECT COALESCE(NULL, NULL, NULL, 'W3Schools.com', NULL, 'Example.com');
+will display result 
+W3Schools.com
+
+this Coalesce will be update further
