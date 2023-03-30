@@ -1,0 +1,15 @@
+/*
+DATEPART is a function in Microsoft SQL Server that extracts a specific part of a date or time value, 
+such as the year, month, day, hour, minute, or second. */
+
+For Example :
+--
+SELECT 
+    id,
+    call_duration,
+    DATE_PART('hour', created_on) AS hour
+FROM redfin_call_tracking
+WHERE 
+    DATE_PART('hour', created_on) >= 15
+    AND DATE_PART('hour', created_on) <= 18
+    AND request_id >= 3;
